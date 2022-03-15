@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+* {
+    font-family: 'PT Sans Narrow', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html {
+   height: 100%;
+}
+
+body {
+    background: radial-gradient(circle, rgba(82,18,168,1) 0%, rgba(50,6,109,1) 100%);
+    color: #ffffff;
+    font-size: 20pt;
+    font-weight: 400;
+    text-align: center;
+    height: 100%;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 100%;
+}
+
+header {
+    font-weight: 700;
+    font-size: 30pt;
+    padding: 1% 0;
+    text-shadow: 0.05em 0.05em 1px hsla(0, 0%, 0%, 0.72);
+}
+
+.content {
+   flex: 1 0 auto;
+}
+
+.authorization {
+   position: relative;
+   min-width: 275px;
+   color: #5312a8;
+   background-color: #ffffff;
+   
+   width: 20%;
+   text-align: center;
+   margin: 10% auto;
+   padding: 20px 0;
+}
+
+.authorization::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  bottom: -12px;
+  left: -12px;
+  right: -12px;
+  background: linear-gradient(61deg, rgba(152,108,211,1) 0%, rgba(78,23,153,1) 100%);
+  box-shadow: 2px -2px 5px hsla(0, 0%, 0%, 0.72), -2px 2px 5px hsla(0, 0%, 0%, 0.72);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.authorization h2 {
+   word-wrap: break-word;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+/* Поля ввода */
+.fieldsContainer {
+   width: 100%;  
+   padding: 5% 10%;
+   box-sizing: border-box;
+}
+
+
+@media screen and (min-width: 1498px) {
+  .fieldNames {
+      font-size: 1em;
+      margin-top: 0.5%;
+  }
+}
+
+@media screen and (max-width: 1497px) {
+  .fieldNames {
+    font-size: 0.95em;
+    margin-top: 2%;
+  }
+}
+
+@media screen and (max-width: 1404px) {
+  .fieldNames {
+    font-size: 0.93em;
+    margin-top: 2.4%;
+  }
+}
+
+
+.fieldNames {
+   text-align: left;
+   width: 27%;
+   min-width: 27%;
+   margin-right:3%;
+   float:left;
+}
+
+
+.fields {
+    width: 70%;
+    float:left;
+    text-align: left;
+}
+
+.fields input {
+    font-size: 0.7em;
+    color: #5312a8;
+    font-weight: 700;
+    width: 94%;
+    border: 2px solid #5312a8;
+    border-radius: 5px;
+    padding: 2px 4px;
+    
+}
+
+
+.fields input:focus[type=text], .fields input:focus[type=password] {
+    outline: none !important;
+    border: 2px solid #8346D3;
+    
+}
+
+footer {
+   padding: 1% 0;
+   flex: 0 0 auto;
+   font-size: 0.5em;
+   text-shadow: 0.05em 0.05em 1px hsla(0, 0%, 0%, 0.72);
+   
+}
+
+
+/* Кнопки */
+.btnSignIn {
+    width: 30%;
+    height: 40px;
+    min-width:57px;
+    font-size: 0.8em;
+    padding: 3px 4px;
+    margin: 15px 0 0 15px;
+    border: 2px solid #5312a8;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #5312a8;
+    background-color: #ffffff;
+}
+
+.btnSignIn:hover {
+    background-color: #8346D3;
+    color: #ffffff;
+    border: 2px solid #32066D;
+}
