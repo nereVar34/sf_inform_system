@@ -1,3 +1,9 @@
+<?php
+if(isset($_POST['signIn']))
+	{
+       header("Location:e-journal.php"); exit();
+    }   
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +32,9 @@
 						<input type="password">
 					</div>
 				</div>
-				<input type="button" class = "btnSignIn" value="ВХОД">
+				</form>
+				<form method="POST">
+				<input type="submit" name ="signIn" class="btnSignIn" value="ВХОД">
 				</form>
 			</div>
 		</div>
