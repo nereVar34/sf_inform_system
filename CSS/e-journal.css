@@ -25,11 +25,31 @@ body {
 }
 
 header {
-    font-weight: 700;
-    font-size: 30pt;
+    margin: 0 40px;
     padding: 1% 0;
+    width: 96%;
     height: 5%;
     text-shadow: 0.05em 0.05em 1px hsla(0, 0%, 0%, 0.72);
+}
+
+.left_header {
+    text-align: left;
+    float: left;
+    width: 50%;
+}
+
+.right_header {
+    text-align: right;
+    float: left;
+    width: 50%;
+}
+
+.addGroup:hover {
+ cursor: pointer;
+}
+
+.logouticon:hover {
+ cursor: pointer;
 }
 
 .content {
@@ -44,11 +64,17 @@ header {
 
 .side_panel {
   text-align: left;
-  //background-color: green;
   width: 20%;
   height:100%;
   float:left;
-
+  //Отключение выделения
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
 }
 
 .side_panel > details {
@@ -56,6 +82,17 @@ header {
   margin: 2%;
   width:100%;
 }
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; transform: translateX(-10px)}
+  100%  {opacity: 1; transform: translateX(0)}
+}
+
+
 details summary::-webkit-details-marker {
   display: none;
 }
@@ -119,21 +156,22 @@ details[open] summary:before {
   height:100%;
 }
 
-.authorization {
-   position: relative;
-   min-width: 275px;
-   color: #5312a8;
-   background-color: #ffffff;
-   
-   width: 20%;
-   text-align: center;
-   margin: 10% auto;
-   padding: 20px 0;
+.empty_now {
+     float:left;
+     color: #ffffff;
+ width: 14.8%;
+ height:5%;
 }
 
 #month {
   display: inline-block;
   width: 200px;
+}
+
+.month_selector{
+     float:left;
+    width: 85%;
+    height:5%;
 }
 
 #back, #next {
@@ -150,6 +188,83 @@ details[open] summary:before {
   box-shadow: 0 0 2px rgba(82,18,168,1),0 0 4px rgba(82,18,168,1),0 0 6px rgba(82,18,168,1),0 0 8px rgba(82,18,168,1);
   border: 1px solid #ffffff;
   
+}
+
+.students_list {
+    float:left;
+    //background-color:green;
+    width: 14.6%;
+    height:95%;
+    text-align: left;
+    border-left: 3px solid currentColor;
+    
+    //Отключение выделения
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.students_list input[type=radio] {
+    display: none;
+
+}
+
+/*
+.students_list input[type=radio]:checked+label {
+    display:inline-block;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: rgba(50,6,109,1);
+    width: 93.3%;
+}
+.students_list input[type=radio]:hover+label {
+    display:inline-block;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: rgba(50,6,109,1);
+    width: 93.3%;
+}*/
+
+#students_list {
+padding: 0 10px;
+}
+
+.grade_editor{
+    float:left;
+    width: 85%;
+    height:100%;
+}
+
+
+.days {
+    width: 100%;
+    height:5%;
+}
+
+table {
+ border-collapse: collapse;
+ width:100%;
+}
+
+td {
+ width: 2%;
+ border: 1px solid black;
+}
+
+.grades{
+    background-color:red;
+    width: 100%;
+    height:80%;
+}
+
+.bottom{
+    background-color:yellow;
+    width: 100%;
+    height:10%;
 }
 
 
